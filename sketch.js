@@ -8,13 +8,17 @@ var database;
 
 var form, player, game;
 
+var car1, car2, car3, car4;
+var cars;
+
 
 function setup(){
-  canvas = createCanvas(400,400);
+  canvas = createCanvas(displayWidth - 20, displayHeight - 50);
   database = firebase.database();
   game = new Game();
   game.getState();
   game.start();
+
 }
 
 
@@ -26,4 +30,6 @@ function draw(){
     clear();
     game.play();
   }
+
+  
 }
